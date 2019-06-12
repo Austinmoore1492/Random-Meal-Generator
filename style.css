@@ -15,11 +15,11 @@ header {
 
 body {
   background: #ddd;
-  color: ;
 }
 
-.container{
-  padding: 30px;
+.container {
+  margin: 0 auto;
+  width: 70%;
 }
 
 h1 {
