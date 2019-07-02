@@ -3,6 +3,8 @@ const currentMeal = document.getElementById("current-meal");
 const message = document.getElementById("message");
 const mealIdeaBtn = document.getElementById("mealIdeaBtn");
 
+var menuArray = JSON.parse(localStorage.getItem('menu')) || [];
+
 const menu = [
   "Potato soup",
   "Chili",
@@ -42,7 +44,7 @@ function pushMeal() {
    menu.push(mealIdea.value);
     
    const JSONReadyMenu = JSON.stringify(menu);
-   console.log(localStorage.setItem('menu', JSONReadyMenu));
+   localStorage.setItem('menu', JSONReadyMenu);
     
    message.innerHTML = `Added ${mealIdea.value}`;
    message.style.color = "#003b6f";
