@@ -1,24 +1,20 @@
 const mealBtn = document.getElementById("mealBtn");
 const currentMeal = document.getElementById("current-meal");
 const message = document.getElementById("message");
+const mealIdeaBtn = document.getElementById("mealIdeaBtn");
 
 const menu = [
   "Potato soup",
   "Chili",
   "Burgers",
   "Spaghetti",
-  "Taco casserole",
-  "Home made pizza",
+  "Pizza",
   "Meat loaf",
-  "White chicken chili",
   "Grilled cheese/mashed potatoes",
   "Beef stew",
   "Roast",
   "Steak",
-  "Cheesy chicken and broccoli",
-  "Fajita casserole",
-  "Bacon cheese burger casserole",
-  "Chicken and dumpling casserole",
+  "Chicken and Dumpling",
   "Pancakes",
   "Biscuits and gravy",
   "Take Out?"
@@ -32,4 +28,24 @@ function showMeal(menu) {
   currentMeal.innerHTML = menu[randIndex];
   message.innerHTML = "How about this?";
   message.style.color = "#003b6f";
+}
+
+
+mealIdeaBtn.addEventListener("click", () => pushMeal(menu));
+
+function pushMeal() {
+  const mealIdea = document.getElementById("mealIdea");
+ 
+  if(mealIdea.value === ""){
+    message.innerHTML = "Please Add A Meal";
+  } else {
+   menu.push(mealIdea.value);
+    
+   const JSONReadyMenu = JSON.stringify(menu);
+   console.log(localStorage.setItem('menu', JSONReadyMenu));
+    
+   message.innerHTML = `Added ${mealIdea.value}`;
+   message.style.color = "#003b6f";
+   mealIdea.value = "";
+  }
 }
