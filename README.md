@@ -6,3 +6,5 @@
 2. Then when you are hungry and  trying to figure out what to eat, hit that Generate Button and **_boom_** you have your meal idea.
 
 Simply go here and get started: [Meal Generator](https://austinmoore1492.github.io/Random-Meal-Generator/)
+
+## This saves to local storage so you will need to use the same computer and browser for you ideas. 
