@@ -2,15 +2,47 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143238970-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143238970-1');
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/menu.css" />
   <title> Dinner Time </title>
+
 </head>
 
 <body>
-  <header>What do you want for dinner?</header>
+
+  <header>What's for dinner?</header>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="./meals.html"><li>Menu</li></a>
+    </ul>
+  </div>
+</nav>
+
   <div class="container">
     <h1>Can't Decide</h1>
     <input id="mealIdea" type="text" placeholder="Enter a Meal Idea">
@@ -20,7 +52,7 @@
     <h4 id="message"></h4>
     <h2 id="current-meal"></h2>
   </div>
-  <script src="main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
