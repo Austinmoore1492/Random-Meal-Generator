@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', showMeal);
 //show a meal from menu array
 function showMeal() {
   const results = document.getElementById("results");
-  let menu = ["chicken", "burgers", "stew", "White Chicken Chili", "spaghetti"];
+  let menu = JSON.parse(localStorage.getItem('menu')) || [];
   let output = '<div id="card-body">';
   menu.forEach(item => {
     output += `<div class="card">
@@ -31,9 +31,17 @@ console.log('click');
     if (confirm("Are You Sure You Want To Delete This Item?")) {
 
       let cardItems = e.target.parentElement;
+      let index = Array.prototype.indexOf.call(card.children, cardItems);
+      removeLocalStorage(index);
       card.removeChild(cardItems);
     }
   }
+}
+  
+function removeLocalStorage(index){
+  let store = JSON.parse(localStorage.getItem("menu")) || [];
+  store.splice(index, 1);
+  localStorage.setItem('menu', JSON.stringify(store));
 }
 });
 
