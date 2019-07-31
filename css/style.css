@@ -17,14 +17,14 @@ header {
 }
 
 header a {
-  position: absolute; 
-  right: 1%; 
-  text-decoration: none; 
+  position: absolute;
+  right: 1%;
+  text-decoration: none;
   color: #f0f0f0;
 }
 
 body {
-  background: #c9c9c9; 
+  background: #c9c9c9;
 }
 
 .container {
@@ -51,7 +51,6 @@ h1 {
   margin-top: 1rem;
   margin-right: 10px;
   margin-bottom: 15px;
-
 }
 
 #mealIdeaBtn {
@@ -64,7 +63,6 @@ h1 {
   border: 1px solid #c40000;
   border-radius: 6px;
   padding: 2px;
-
 }
 
 #mealIdeaBtn:hover {
@@ -117,7 +115,6 @@ hr {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 3rem;
-
 }
 
 #mealBtn:hover {
@@ -145,7 +142,7 @@ hr {
 /* Meal Page CSS */
 
 #card-body {
-  text-transform: uppercase; 
+  text-transform: uppercase;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
@@ -153,18 +150,18 @@ hr {
 
 .card {
   font-size: 1.8rem;
-  padding: 5px;  
+  padding: 5px;
   background: #e8e8e8;
   border: 2px solid #1d1d1d;
   position: relative;
   padding: 0 1.5rem;
-  transition: all 0.5s ease; 
+  transition: all 0.5s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-  text-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
@@ -174,10 +171,11 @@ hr {
 .btnDelete {
   display: inline-block;
   cursor: pointer;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   color: #8c0005;
-  padding: 0 5px; 
+  float: right;
+  padding: 0 5px;
   font-size: 1.2rem;
   position: absolute;
   right: 1%;
@@ -185,10 +183,10 @@ hr {
   transition: all 0.3s ease;
 }
 
-.btnDelete:hover {
+.card .btnDelete:hover {
   font-size: 1.5rem;
   transform: translateY(-3px);
-  text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
 .btnDelete:focus {
@@ -210,7 +208,7 @@ hr {
   }
   header a {
     display: block;
-    position: static; 
+    position: static;
     border-top: 2px solid #1d1d1d;
     padding-top: 0.8rem;
   }
@@ -289,15 +287,16 @@ hr {
     text-align: center;
     font-size: 1rem;
   }
-  .btnDelete, .btnDelete:hover {
+  .btnDelete,
+  .btnDelete:hover {
     font-size: 1rem;
     transform: translateY(0px);
-    text-shadow: 0px 0px 0px rgba(0,0,0,0);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   }
   .card:hover {
     transform: translateY(0px);
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
-    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -306,12 +305,12 @@ hr {
     margin-top: 1rem;
   }
   #mealIdea {
-    display: inline-block;
+    display: inline;
     margin-right: 10px;
     width: 50%;
   }
   #mealIdeaBtn {
-    display: inline-block;
+    display: inline;
     font-size: 1.2rem;
     width: 40%;
   }
