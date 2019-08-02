@@ -16,13 +16,11 @@ function showMeal() {
   results.innerHTML = output;
 }
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
 const card = document.querySelector('#card-body');
 card.addEventListener("click", removeItem);
+card.addEventListener("mouseover", btnDelHover);
+card.addEventListener("mouseout", btnDelOut);
 
 //Delete item
 function removeItem(e) {
@@ -43,8 +41,20 @@ function removeLocalStorage(index){
   store.splice(index, 1);
   localStorage.setItem('menu', JSON.stringify(store));
 }
+  
+  function btnDelHover(e){
+    if(e.target.classList.contains("btnDelete")){
+      let cardItems = e.target.parentElement;
+      cardItems.style.background = "#8c0005";
+      cardItems.style.color = "#e8e8e8";
+    }
+  }
+
+  function btnDelOut(e){
+    if(e.target.classList.contains("btnDelete")){
+      let cardItems = e.target.parentElement;
+      cardItems.style.background = "#e8e8e8";
+      cardItems.style.color = "#1d1d1d";
+    }
+  }
 });
-
-
-
-
