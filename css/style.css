@@ -7,6 +7,7 @@
   text-align: center;
   box-sizing: border-box;
   word-break: break-word;
+  text-transform: capitalize; 
 }
 
 header {
@@ -102,7 +103,6 @@ hr {
   font-weight: normal;
   margin: 1rem;
   margin-top: 2rem;
-  text-transform: capitalize;
 }
 
 #mealBtn {
@@ -145,7 +145,6 @@ hr {
 /* Meal Page CSS */
 
 #card-body {
-  text-transform: uppercase;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
