@@ -6,6 +6,7 @@
   font-family: "Poppins", Arial;
   text-align: center;
   box-sizing: border-box;
+  word-break: break-all;
 }
 
 header {
@@ -146,9 +147,11 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
+  margin-bottom: 2rem;
 }
 
 .card {
+  min-height: 50px;
   font-size: 1.8rem;
   padding: 5px;
   background: #e8e8e8;
@@ -156,16 +159,19 @@ hr {
   position: relative;
   padding: 0 1.5rem;
   transition: all 0.5s ease;
+  color: #1d1d1d;
+  display: flex;
+  align-items: center;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
   display: inline-block;
+  margin: auto;
 }
 
 .btnDelete {
@@ -179,14 +185,12 @@ hr {
   font-size: 1.2rem;
   position: absolute;
   right: 1%;
-  top: 0%;
+  top: 1%;
   transition: all 0.3s ease;
 }
 
-.card .btnDelete:hover {
-  font-size: 1.5rem;
-  transform: translateY(-3px);
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+.btnDelete:hover {
+  color: #e8e8e8;
 }
 
 .btnDelete:focus {
