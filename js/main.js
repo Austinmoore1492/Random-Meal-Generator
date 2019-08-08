@@ -15,6 +15,7 @@ function showMeal(menu) {
         const randIndex = Math.floor(Math.random() * menu.length);
         currentMeal.innerHTML = menu[randIndex];
         message.innerHTML = "How about this?";
+        currentMeal.classList.add("currentMeal-active");
     }
   }
 

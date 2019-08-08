@@ -26,7 +26,6 @@
 </head>
 
 <body>
-<div class="overlay">
   <header>What's for dinner?</header>
 
 <nav role="navigation">
@@ -44,15 +43,18 @@
 </nav>
 
   <div class="container">
-    <h1>Can't Decide</h1>
-    <input id="mealIdea" type="text" placeholder="Enter a Meal Idea">
-    <button type="button" id="mealIdeaBtn">Submit Meal</button>
-    <hr>
-    <button type="button" id="mealBtn">Generate A Meal</button>
-    <h4 id="message"></h4>
-    <h2 id="current-meal"></h2>
+    <div class="meals-overlay">
+      <h1>Can't Decide</h1>
+    </div>
+      <input id="mealIdea" type="text" placeholder="Enter a Meal Idea">
+      <button type="button" id="mealIdeaBtn">Submit Meal</button>
+      <hr>
+      <button type="button" id="mealBtn">Generate A Meal</button>
+    <div class="meals-overlay">
+      <h4 id="message"></h4>
+    </div>
+     <h2 id="current-meal"></h2>
   </div>
- </div> 
   <script src="./js/main.js"></script>
   <script src="./js/background.js"></script>
 </body>
