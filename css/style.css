@@ -25,10 +25,7 @@ header a {
   color: #f0f0f0;
 }
 
-body {
-  height: 100%;
-  widths: 100%;
-}
+
 
 .meals-overlay {
   background: rgba(0,0,0,0.7);
