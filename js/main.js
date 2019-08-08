@@ -2,7 +2,7 @@ const mealBtn = document.getElementById("mealBtn");
 const currentMeal = document.getElementById("current-meal");
 const message = document.getElementById("message");
 const mealIdeaBtn = document.getElementById("mealIdeaBtn");
-
+const input = document.getElementById('mealIdea');
 let menu = JSON.parse(localStorage.getItem('menu')) || [];
 
 mealBtn.addEventListener("click", () => showMeal(menu));
@@ -11,12 +11,10 @@ mealBtn.addEventListener("click", () => showMeal(menu));
 function showMeal(menu) {
     if(menu == ""){
         message.innerHTML = "Please Add an Item";
-        message.style.color = "#003b6f";
     } else {
         const randIndex = Math.floor(Math.random() * menu.length);
         currentMeal.innerHTML = menu[randIndex];
         message.innerHTML = "How about this?";
-        message.style.color = "#003b6f";
     }
   }
 
@@ -29,15 +27,20 @@ function pushMeal() {
 
   if(mealIdea.value === ""){
     message.innerHTML = "Please Add A Meal";
-    message.style.color = "#003b6f";
   } else {    
 
    store();
    message.innerHTML = `Added ${mealIdea.value}`;
-   message.style.color = "#003b6f";
    mealIdea.value = "";
   }
 }
+
+input.addEventListener('keydown', e => {
+  if(e.keyCode === 13){
+    e.preventDefault;
+    pushMeal();
+  }
+});
 
 //function to store values into menu array
 function store(){

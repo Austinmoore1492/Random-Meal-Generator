@@ -24,15 +24,11 @@ card.addEventListener("mouseout", btnDelOut);
 
 //Delete item
 function removeItem(e) {
-console.log('click');
   if (e.target.classList.contains("btnDelete")) {
-    if (confirm("Are You Sure You Want To Delete This Item?")) {
-
       let cardItems = e.target.parentElement;
       let index = Array.prototype.indexOf.call(card.children, cardItems);
       removeLocalStorage(index);
       card.removeChild(cardItems);
-    }
   }
 }
   
@@ -47,6 +43,7 @@ function removeLocalStorage(index){
       let cardItems = e.target.parentElement;
       cardItems.style.background = "#8c0005";
       cardItems.style.color = "#e8e8e8";
+      cardItems.style.transform = 'translateY(-5px)';
     }
   }
 
@@ -55,6 +52,7 @@ function removeLocalStorage(index){
       let cardItems = e.target.parentElement;
       cardItems.style.background = "#e8e8e8";
       cardItems.style.color = "#1d1d1d";
+      cardItems.style.transform = 'translateY(0px)';
     }
   }
 });

@@ -26,7 +26,16 @@ header a {
 }
 
 body {
-  background: #c9c9c9;
+  height: 100vh;
+}
+
+.overlay {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 25%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.4) 100%);
+  height: 100%;
+}
+.meals-overlay {
+  background: rgba(0,0,0,0.6);
 }
 
 .container {
@@ -36,10 +45,10 @@ body {
 
 h1 {
   font-size: 3rem;
+  color: #f0f0f0;
   font-weight: normal;
   margin: 1rem;
   margin-top: 3rem;
-  border-bottom: 2px solid #8c0005;
 }
 
 #mealIdea {
@@ -86,6 +95,10 @@ h1 {
   transition: all 0.1s ease;
 }
 
+#mealIdeaBtn:focus, #mealBtn:focus {
+  outline: none;
+}
+
 /* HR styles from css tricks https://css-tricks.com/examples/hrs/ */
 hr {
   border: 0;
@@ -99,7 +112,8 @@ hr {
 }
 
 #current-meal {
-  font-size: 2.5rem;
+  color: #f0f0f0;
+  font-size: 3rem;
   font-weight: normal;
   margin: 1rem;
   margin-top: 2rem;
@@ -138,18 +152,20 @@ hr {
   transition: all 0.1s ease;
 }
 
+
 #message {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: #f0f0f0;
 }
 
 /* Meal Page CSS */
 
 #card-body {
+  text-transform: uppercase;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
   margin-bottom: 2rem;
-  text-transform: capitalize; 
 }
 
 .card {
@@ -166,11 +182,6 @@ hr {
   align-items: center;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
 .card h3 {
   display: inline-block;
   margin: auto;
@@ -182,7 +193,6 @@ hr {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   color: #8c0005;
-  float: right;
   padding: 0 5px;
   font-size: 1.2rem;
   position: absolute;
@@ -203,6 +213,9 @@ hr {
   .container {
     width: 90%;
   }
+  .overlay {
+    background: rgba(0,0,0,0.6);
+  }
   hr {
     width: 100%;
     height: 5px;
@@ -222,7 +235,10 @@ hr {
     font-size: 2rem;
     font-weight: normal;
     margin: 1rem;
+    margin-bottom: 1rem;
     margin-top: 3rem;
+    border-bottom: 2px solid #8c0005;
+    word-break: normal;
   }
   #mealIdea {
     display: block;
@@ -290,8 +306,11 @@ hr {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
-    text-align: center;
     font-size: 1rem;
+    text-align: center;
+  }
+  .card {
+    font-size: 1.5rem;
   }
   .btnDelete,
   .btnDelete:hover {
@@ -311,12 +330,12 @@ hr {
     margin-top: 1rem;
   }
   #mealIdea {
-    display: inline;
+    display: inline-block;
     margin-right: 10px;
     width: 50%;
   }
   #mealIdeaBtn {
-    display: inline;
+    display: inline-block;
     font-size: 1.2rem;
     width: 40%;
   }

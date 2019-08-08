@@ -27,29 +27,36 @@
       
 
 <body>
-<nav role="navigation">
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
 
-    <ul id="menu">
-      <a href="./index.html"><li>Home</li></a>
-      <a href="#"><li class="active">Menu</li></a>
-    </ul>
-  </div>
-</nav>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <ul id="menu">
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="#">
+          <li class="active">Menu</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
 
   <header>What's for dinner?</header>
-  <div class="container">
+<div class="container">
+  <div class="meals-overlay">
     <h1>Here Are Your Meals</h1>
+  </div>        
     <div id="results">
       <div id="card-body"></div>
     </div>
   </div>
-
   <script defer src="./js/mealsList.js"></script>
+  <script src="./js/background.js"></script>
 </body>
 
 </html>
