@@ -51,3 +51,6 @@ function store(){
     localStorage.setItem('menu', JSON.stringify(menu));
      
 }
+
+
+
