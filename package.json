@@ -1,7 +1,7 @@
 {
-  "name": "parcel-sandbox",
-  "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
+  "name": "Random-Meal-Generator",
+  "version": "1.1.0",
+  "description": "Add meals and let this app choose dinner for you",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
