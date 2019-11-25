@@ -10,7 +10,7 @@ mealBtn.addEventListener("click", () => showMeal(menu));
 //show a meal from menu array
 function showMeal(menu) {
     if(menu == ""){
-        message.innerHTML = "Please Add an Item";
+        message.innerHTML = "Please Add an Meal";
     } else {
         const randIndex = Math.floor(Math.random() * menu.length);
         currentMeal.innerHTML = menu[randIndex];
